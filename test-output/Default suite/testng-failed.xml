@@ -5,7 +5,6 @@
     <classes>
       <class name="Test_Cases.TestCase_1">
         <methods>
-          <include name="closeApplication"/>
           <include name="RegistratonTesting"/>
           <include name="openApplication"/>
         </methods>

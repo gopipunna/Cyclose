@@ -1,4 +1,4 @@
-package Cyclos;
+package Cyclos_Page_ObjectModel;
 
 import java.util.List;
 
@@ -8,10 +8,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+
 
 public class Registration {
-	//Select sc;
+	
 	JavascriptExecutor js;
 	public static WebDriver driver; 
 	public Registration (WebDriver driver) { 
@@ -27,31 +27,29 @@ public class Registration {
 	@FindBy(xpath = "//input[@id='id_3']")
 	WebElement Email;
 	
-	@FindBy(xpath = "(//input[@name='gender'])[2]")
-	WebElement Gender;  
+	@FindBy(xpath="(//label[@class='custom-control-label'])[2]")
+	WebElement gender;
 	
-	@FindBy (xpath="business_type_restaurants")
-	WebElement buciness;
-	//@FindBy(id= "(//div[@id='dropdown-menu-business_type'])[1]")
+	
+	//@FindBy(id= "(//div[@class='d-flex label-value-value'])[6]") 
 	//WebElement Bussiness;
 	
-	@FindBy(xpath = "//input[@id='id_4']")
-	WebElement Mobile_no;
-
-	@FindBy(xpath = "//input[@id='id_5']")
-	WebElement landline_no;
-
-	@FindBy(xpath = "//input[@id='id_6']")
-	WebElement Address;
 	
-	@FindBy(xpath = "//input[@id='addressLine1']")
-	WebElement Addressline;
 	
-	@FindBy(xpath = "//input[@id='zip']")
-	WebElement zipcode;
+	@FindBy(xpath = "//button[@class='btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary']")
+		WebElement Next;
 	
-	//@FindBy(xpath = "")
-	//WebElement ;
+	@FindBy(xpath = "//input[@class='form-control w-100 ng-pristine ng-invalid ng-touched']")
+	WebElement Password;
+	
+	@FindBy(xpath = "(//input[@class='form-control w-100 ng-pristine ng-invalid ng-touched'])[2]")
+	WebElement ComPassword;
+	
+	@FindBy (xpath="custom-control d-flex align-content-center p-0 custom-checkbox")
+	WebElement Demo;
+	
+	@FindBy(xpath="(//button[@type='button'])[2]")
+	WebElement submit;
 	
 	
 	public void Setname() {
@@ -64,35 +62,36 @@ public class Registration {
 		Email.sendKeys("gopipunna8@gmail.com");
 	}
 	public void SetGendre() {
-		//Gender.click();
-		js.executeScript("arguments[0].click();",Gender);
+		gender.click();
+		//js.executeScript("arguments[0].click();",Gender);
 	}
-	public void SetBussiness() {
-		buciness.click();
-	}
-	/*List<WebElement> ele=driver.findElements(By.xpath("(//div[@id='dropdown-menu-business_type'])[1]"));
 	
-		int size=ele.size();
-		System.out.println(size);
 	
-		for(int i=0;i<size;i++) {
-			String value=ele.get(i).getText();
-			System.out.println(value);
-			if(value.equals("Clothing")) {
-			ele.get(i).click();
-			}
-			}
-}*/
-	public void SetMobile() {
-		Mobile_no.sendKeys("6302063675");
+	
+	public void Setnext() {
+		Next.click();
+		
+}
+	public void SetPass() {
+		//Password.sendKeys("gopi@123$.%");
+		/*js.executeScript("arguments[0].scrollIntoView();", Password);
+		System.out.println(js.executeScript("return window.pageYOffset;", ""));*/
+		
+		js.executeScript("arguments[0].setAttribute('value','anwesh26')", Password);
+		//js.executeScript("arguments[0]value='gopi@123$.%';",Password);
 	}
-	public void SetLandlne() {
-		landline_no.sendKeys("1234");
-	}
-	public void Setaddress() {
-		Address.click();
-	}
-	public void Setaddresline() {
-		Addressline.sendKeys("Secundrabad");
-	}
+	public void Setcompass() {
+		//ComPassword.sendKeys("gopi@123$.%");
+		js.executeScript("arguments[0].setAttribute('value','anwesh26')", ComPassword);
+		//js.executeScript("arguments[0]value='gopi@123$.%';",ComPassword);
+}
+	public void Setdemo() {
+		Demo.click();
+	
+}
+	
+	public void SetSubmitButton() {
+		submit.click();
+	
+}
 }

@@ -3,6 +3,9 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <parameter name="browser" value="chrome"/>
   <parameter name="url" value="https://demo.cyclos.org/ui/users/registration"/>
+  <listeners>
+    <listener class-name="Extent_reprt.Generate_Report"/>
+  </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
       <class name="Test_Cases.TestCase_1">

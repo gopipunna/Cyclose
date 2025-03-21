@@ -131,8 +131,8 @@
                   </a> <!-- RegistratonTesting -->
                   <span class="method-name">RegistratonTesting</span>
                   <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])&quot; because &quot;this.js&quot; is null
-	at Cyclos.Registration.SetGendre(Registration.java:68)
-	at Test_Cases.TestCase_1.RegistratonTesting(TestCase_1.java:18)
+	at Cyclos_Page_ObjectModel.Registration.SetPass(Registration.java:80)
+	at Test_Cases.TestCase_1.RegistratonTesting(TestCase_1.java:34)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 27 stack frames
 </div> <!-- stack-trace -->
@@ -152,6 +152,9 @@
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
   &lt;parameter name=&quot;url&quot; value=&quot;https://demo.cyclos.org/ui/users/registration&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;Extent_reprt.Generate_Report&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Test_Cases.TestCase_1&quot;/&gt;
@@ -198,7 +201,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'RegistratonTesting')
 data.setCell(0, 2, 'Test_Cases.TestCase_1')
-data.setCell(0, 3, 4374);
+data.setCell(0, 3, 4301);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -238,7 +241,7 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">RegistratonTesting</span>
-                <span class="method-start">5350 ms</span>
+                <span class="method-start">4771 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

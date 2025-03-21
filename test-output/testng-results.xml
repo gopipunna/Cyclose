@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-20T13:06:46 IST" name="Suite" finished-at="2025-03-20T13:06:56 IST" duration-ms="9752">
+  <suite started-at="2025-03-21T12:00:22 IST" name="Suite" finished-at="2025-03-21T12:00:32 IST" duration-ms="9440">
     <groups>
     </groups>
-    <test started-at="2025-03-20T13:06:46 IST" name="Test" finished-at="2025-03-20T13:06:56 IST" duration-ms="9752">
+    <test started-at="2025-03-21T12:00:22 IST" name="Test" finished-at="2025-03-21T12:00:32 IST" duration-ms="9440">
       <class name="Test_Cases.TestCase_1">
-        <test-method is-config="true" signature="openApplication(java.lang.String,java.lang.String)[pri:0, instance:Test_Cases.TestCase_1@42a48628]" started-at="2025-03-20T13:06:46 IST" name="openApplication" finished-at="2025-03-20T13:06:51 IST" duration-ms="5330" status="PASS">
+        <test-method is-config="true" signature="openApplication(java.lang.String,java.lang.String)[pri:0, instance:Test_Cases.TestCase_1@6b81ce95]" started-at="2025-03-21T12:00:23 IST" name="openApplication" finished-at="2025-03-21T12:00:27 IST" duration-ms="4758" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,15 +23,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApplication -->
-        <test-method signature="RegistratonTesting()[pri:0, instance:Test_Cases.TestCase_1@42a48628]" started-at="2025-03-20T13:06:51 IST" name="RegistratonTesting" finished-at="2025-03-20T13:06:56 IST" duration-ms="4374" status="FAIL">
+        <test-method signature="RegistratonTesting()[pri:0, instance:Test_Cases.TestCase_1@6b81ce95]" started-at="2025-03-21T12:00:27 IST" name="RegistratonTesting" finished-at="2025-03-21T12:00:32 IST" duration-ms="4301" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "this.js" is null]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "this.js" is null
-at Cyclos.Registration.SetGendre(Registration.java:68)
-at Test_Cases.TestCase_1.RegistratonTesting(TestCase_1.java:18)
+at Cyclos_Page_ObjectModel.Registration.SetPass(Registration.java:80)
+at Test_Cases.TestCase_1.RegistratonTesting(TestCase_1.java:34)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
